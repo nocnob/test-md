@@ -43,6 +43,8 @@ lowkey2046@lowkey2046
 
 lowkey2046@oschina
 
+lowkey2046@oschina lowkey2046@oschina
+
 ### 不匹配
 
 * at 前面非空白字符
