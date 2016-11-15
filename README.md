@@ -131,6 +131,10 @@ test commit:90a740efae5329635db2d7cf99a95e60547c06f4; commit:90a740efae5329635db
 
 test commit:90a740efae5329635db2d7cf99a95e60547c06f4: commit:90a740efae5329635db2d7cf99a95e60547c06f4:
 
+* commit 连接，匹配第一个
+
+test: commit:90a740efae5329635db2d7cf99a95e60547c06f4commit:90a740efae5329635db2d7cf99a95e60547c06f4
+
 ### 不匹配
 
 * commit 中间
@@ -139,6 +143,3 @@ test:commit:90a740efae5329635db2d7cf99a95e60547c06f4
 
 test:commit:90a740efae5329635db2d7cf99a95e60547c06f4:commit
 
-* commit 连接
-
-test: commit:90a740efae5329635db2d7cf99a95e60547c06f4commit:90a740efae5329635db2d7cf99a95e60547c06f4
