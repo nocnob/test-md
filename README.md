@@ -78,7 +78,7 @@ test#1test#2test
 
 * 连续 issue
 
-test#1#2test
+test#1#2#1test
 
 ## commit
 
