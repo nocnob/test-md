@@ -22,6 +22,10 @@ test @lowkey2046
 
 test @lowkey2046 @lowkey2046 @lowkey2046
 
+* 带标点
+
+@lowkey2046; @lowkey2046。 @lowkey2046.
+
 ### 不匹配
 
 * at 前面非空白字符
@@ -62,6 +66,10 @@ test #1 #1 #1
 
 test #1 #1 #1
 
+* 带标点
+
+test #1, #1; #1。
+
 ### 不匹配
 
 * issue 前非空白字符
@@ -101,6 +109,12 @@ test commit:90a740efae5329635db2d7cf99a95e60547c06f4
 * 连续 commit
 
 test commit:90a740efae5329635db2d7cf99a95e60547c06f4 commit:90a740efae5329635db2d7cf99a95e60547c06f4
+
+* 带标点
+
+test commit:90a740efae5329635db2d7cf99a95e60547c06f4; commit:90a740efae5329635db2d7cf99a95e60547c06f4;
+
+test commit:90a740efae5329635db2d7cf99a95e60547c06f4: commit:90a740efae5329635db2d7cf99a95e60547c06f4:
 
 ### 不匹配
 
