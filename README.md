@@ -26,6 +26,23 @@ test @lowkey2046 @lowkey2046 @lowkey2046
 
 @lowkey2046; @lowkey2046。 @lowkey2046.
 
+
+* at 连接，匹配第一个
+
+@lowkey2046@lowkey2046
+
+@lowkey2046@lowkey2046 @lowkey2046@lowkey2046 @lowkey2046@lowkey2046
+
+@lowkey2046@lowkey2046@lowkey2046
+
+* 邮箱
+
+lowkey2046@163.com
+
+lowkey2046@lowkey2046
+
+lowkey2046@oschina
+
 ### 不匹配
 
 * at 前面非空白字符
@@ -33,14 +50,6 @@ test @lowkey2046 @lowkey2046 @lowkey2046
 lowkey2046@lowkey2046
 
 lowkey2046@lowkey2046 lowkey2046@lowkey2046 lowkey2046@lowkey2046
-
-* at 连接
-
-@lowkey2046@lowkey2046
-
-@lowkey2046@lowkey2046 @lowkey2046@lowkey2046 @lowkey2046@lowkey2046
-
-@lowkey2046@lowkey2046@lowkey2046
 
 ## issue
 
@@ -70,6 +79,10 @@ test #1 #1 #1
 
 test #1, #1; #1。
 
+* 连续 issue，匹配第一个
+
+test #1#1#1#1
+
 ### 不匹配
 
 * issue 前非空白字符
@@ -78,7 +91,7 @@ test#1
 
 * issue 后接非空白字符
 
-test #1test #1#1
+test #1test
 
 * issue 在中间
 
