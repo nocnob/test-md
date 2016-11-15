@@ -40,4 +40,36 @@ lowkey2046@lowkey2046 lowkey2046@lowkey2046 lowkey2046@lowkey2046
 
 ## issue
 
+### 匹配
+
+* issue 开头(无，与 markdown 冲突)
+
+#1
+
+#1 test
+
+* issue 中间
+
+test #1 test
+
+* issue 结尾
+
+test #1
+
+* 连续 issue
+
+test #1 #1 #1
+
+test #1 #1 #1
+
+### 不匹配
+
+* issue 前非空白字符
+
+test#1
+
+* issue 后接非空白字符
+
+test #1test #1#1
+
 ## commit
