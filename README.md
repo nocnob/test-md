@@ -76,6 +76,10 @@ test #1test #1#1
 
 test#1test#2test
 
+* 连续 issue
+
+test#1#2test
+
 ## commit
 
 ### 匹配
