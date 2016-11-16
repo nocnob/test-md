@@ -16,10 +16,14 @@ test @lowkey2046 @lowkey2046 @lowkey2046
 
 @lowkey2046; @lowkey2046。 @lowkey2046.
 
+`lowkey2046*@oschina`
+
+lowkey2046*@oschina
 
 匹配第一个 `@lowkey2046@lowkey2046@lowkey2046@lowkey2046`
 
 @lowkey2046@lowkey2046@lowkey2046@lowkey2046
+
 
 
 ### 不匹配
@@ -39,6 +43,10 @@ lowkey2046@lowkey2046
 `lowkey2046@oschina lowkey2046@oschina`
 
 lowkey2046@oschina lowkey2046@oschina
+
+`lowkey2046_@oschina`
+
+lowkey2046_@oschina
 
 ## issue
 
