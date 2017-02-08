@@ -1,2 +1,4 @@
-| Table | are | cool |
-| 表格 | 测试测试测试 |
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
