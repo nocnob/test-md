@@ -1,12 +1,17 @@
 # 链接
 
-[OSC blog http](http://my.oschina.net/lowkey2046/blog)
+[link1](#link1)
 
-[OSC blog https](https://my.oschina.net/lowkey2046/blog)
+[link2](#link2)
 
-[OSC Gitlab http](http://www.oschina.net/p/gitlab)
+[link3](#link3)
 
-[OSC Gitlab https](https://www.oschina.net/p/gitlab)
+
+[1 链接](#1 链接)
+
+[2 链接](#2 链接)
+
+[3 链接](#3 链接)
 
 ## link1
 
