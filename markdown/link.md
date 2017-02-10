@@ -16,6 +16,8 @@
 
 [link-README](../README.md)
 
+![image](./link/1.png)
+
 ## 自适应链接
 
 [OSC Gitlab 自适应](//www.oschina.net/p/gitlab)
