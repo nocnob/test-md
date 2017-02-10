@@ -2,10 +2,36 @@ html <a href="http://git.oschina.net/" tartget="_blank">点我在新的标签打
 
 html <details> <summary> </summary> </details>
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update
--->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-Table of Contents generated with DocToc
+## HTML 注释
 
-这是一些内容
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+### 一注释一行
+
+<!-- 注释 -->
+<!-- 注释 -->
+
+测试
+
+<!-- 注释 -->
+
+### 多注释一行
+
+<!-- 注释 --><!-- 注释 -->
+测试
+<!-- 注释 -->
+
+### 一注释多行
+
+<!--
+
+注释
+
+-->
+
+测试
+
+<!--
+
+注释
+
+-->
+
