@@ -18,6 +18,10 @@
 
 ![image](./link/1.png)
 
+## HTTP(S)
+
+![image](http://git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png)
+
 ## 自适应链接
 
 [OSC Gitlab 自适应](//www.oschina.net/p/gitlab)
