@@ -28,6 +28,8 @@
 
 [OSC Gitlab 自适应](//www.oschina.net/p/gitlab)
 
+![image](//git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png)
+
 ## link1
 
 [自适应协议](//my.oschina.net/lowkey2046/blog)
