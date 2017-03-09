@@ -35,3 +35,16 @@ html <details> <summary> </summary> </details>
 
 -->
 
+## pre
+
+start
+<pre>
+  test485 mode device baud databits parity stopbits loop
+      mode:       master/slave
+      device:     /dev/ttyXR0, /dev/ttyXR1, ...
+      databits:   5, 6, 7, 8
+      parity:     0(none), 1(odd), 2(even)
+      stopbits:   1, 2
+      loop:       loop count ( <= 100000000 )
+</pre>
+end
