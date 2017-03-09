@@ -10,7 +10,13 @@
 
 ### HTML
 
+<a href="//www.oschina.net/p/gitlab">OSC Gitlab</a>
+
 <a href="//www.oschina.net/p/gitlab" class="cls">OSC Gitlab</a>
+
+<img alt="images" src="http://git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png"/>
+
+<img alt="images" src="http://git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png" class="cls"/>
 
 ## 2. HTTP
 
@@ -22,9 +28,13 @@
 
 ### HTML
 
+<a href="http://git.oschina.net/osc/osc/blob/master/readme.md">GitOSC</a>
+
 <a href="http://git.oschina.net/osc/osc/blob/master/readme.md" class="cls">GitOSC</a>
 
-<img src="http://git.oschina.net/osc/osc/blob/master/readme.md" class="cls" />
+<img src="http://git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png"/>
+
+<img alt="images" src="http://git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png"/>
 
 ## 3. HTTPS
 
@@ -38,7 +48,7 @@
 
 <a href="https://git.oschina.net/osc/osc/blob/master/readme.md" class="cls">GitOSC</a>
 
-<img src="https://git.oschina.net/osc/osc/blob/master/readme.md" class="cls" />
+<img src="https://git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png"/>
 
 ## 3. 页内跳转
 
