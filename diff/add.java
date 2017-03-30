@@ -11,8 +11,8 @@ private static String buildProjectTweetContent(String content, String name, Stri
     .append(projectId)
     .append("' title='")
     .append(FormatTool.html(name))
-    .append("'>")
+    .append("'>#")
     .append(FormatTool.html(name))
-    .append("</a>");
+    .append("#</a>");
   return tweetHtml.toString();
 }
