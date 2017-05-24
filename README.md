@@ -8,6 +8,12 @@
 [![4.png](images/4.png "4.png")]()
 [![4.png](images/4.png "4.png")]()
 
+## SVG
+
+![logo.svg](/images/logo.svg "logo.svg")
+
+![logo.svg](images/logo.svg "logo.svg")
+
 ## Video
 
 ![Sample Video](video/markdown_video.mp4)
