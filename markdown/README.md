@@ -1,121 +1,131 @@
-# Markdown test
+# 链接
 
-[用户名](#用户名)
-[匹配](#匹配)
+## 1. 自适应链接
 
-## 用户名
+### Markdown
 
-### 匹配
+[OSC Gitlab 自适应](//www.oschina.net/p/gitlab)
 
-`@lowkey2046`
+![image](//git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png)
 
-@lowkey2046
+### HTML
 
-`test @lowkey2046 @lowkey2046 @lowkey2046`
+<a href="//www.oschina.net/p/gitlab">OSC Gitlab</a>
 
-test @lowkey2046 @lowkey2046 @lowkey2046
+<a href="//www.oschina.net/p/gitlab" class="cls">OSC Gitlab</a>
 
-`@lowkey2046; @lowkey2046。 @lowkey2046.`
+<img alt="images" src="http://git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png"/>
 
-@lowkey2046; @lowkey2046。 @lowkey2046.
+<img alt="images" src="http://git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png" class="cls"/>
 
-`lowkey2046*@oschina`
+## 2. HTTP
 
-lowkey2046*@oschina
+### Markdown
 
-匹配第一个 `@lowkey2046@lowkey2046@lowkey2046@lowkey2046`
+[link](http://git.oschina.net/osc/osc/blob/master/readme.md)
 
-@lowkey2046@lowkey2046@lowkey2046@lowkey2046
+![image](http://git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png)
 
+### HTML
 
+<a href="http://git.oschina.net/osc/osc/blob/master/readme.md">GitOSC</a>
 
-### 不匹配
+<a href="http://git.oschina.net/osc/osc/blob/master/readme.md" class="cls">GitOSC</a>
 
-`lowkey2046@lowkey2046 lowkey2046@lowkey2046 lowkey2046@lowkey2046`
+<img src="http://git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png"/>
 
-lowkey2046@lowkey2046 lowkey2046@lowkey2046 lowkey2046@lowkey2046
+<img alt="images" src="http://git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png"/>
 
-`lowkey2046@163.com`
+## 3. HTTPS
 
-lowkey2046@163.com
+### Markdown
 
-`lowkey2046@lowkey2046`
+[link](https://git.oschina.net/osc/osc/blob/master/readme.md)
 
-lowkey2046@lowkey2046
+![image](https://git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png)
 
-`lowkey2046@oschina lowkey2046@oschina`
+### HTML
 
-lowkey2046@oschina lowkey2046@oschina
+<a href="https://git.oschina.net/osc/osc/blob/master/readme.md" class="cls">GitOSC</a>
 
-`lowkey2046_@oschina`
+<img src="https://git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png"/>
 
-lowkey2046_@oschina
+## 3. 页内跳转
 
-## issue
+### Markdown
 
-### 匹配
+[link1](#link1)
 
-* issue 开头(无，与 markdown 冲突)
+[1 链接](#1-链接)
 
-`#1`
+### HTML
 
-#1
+<a href="#link1">link1</a>
 
-`test #1 #1 #1`
+<a href="#1-链接">#1-链接</a>
 
-test #1 #1 #1
+## 4. 空链接
 
-`test #1, #1; #1。`
+### Markdown
 
-test #1, #1; #1。
+[link-README]()
 
-连续 issue，匹配第一个 `test #1#1#1#1`
+### HTML
 
-test #1#1#1#1
+<a href="">link-README</a>
 
-### 不匹配
+## 5. 相对链接
 
-`test#1`
+### Markdown
 
-test#1
+[link-README](./link/README.md)
 
-`test #1test`
+[link-README](../README.md)
 
-test #1test
+![image](./link/1.png)
 
-`test#1test#2test`
+### HTML
 
-test#1test#2test
+<a href="../README.md">link-README</a>
 
-`test#1#2#1test`
+<img src="./link/1.png" alt=""/>
 
-test#1#2#1test
+## link1
 
-## commit
+```ruby
+puts "Hello Ruby"
+puts "Hello Ruby"
+puts "Hello Ruby"
+puts "Hello Ruby"
+puts "Hello Ruby"
+```
 
-### 匹配
+## link2
 
-`commit:90a740efae5329635db2d7cf99a95e60547c06f4`
+```ruby
+puts "Hello Ruby"
+puts "Hello Ruby"
+puts "Hello Ruby"
+puts "Hello Ruby"
+puts "Hello Ruby"
+```
 
-commit:90a740efae5329635db2d7cf99a95e60547c06f4
+## 1 链接
 
-`commit:90a740efae5329635db2d7cf99a95e60547c06f4 commit:90a740efae5329635db2d7cf99a95e60547c06f4 commit:90a740efae5329635db2d7cf99a95e60547c06f4`
+```ruby
+puts "Hello Ruby"
+puts "Hello Ruby"
+puts "Hello Ruby"
+puts "Hello Ruby"
+puts "Hello Ruby"
+```
 
-commit:90a740efae5329635db2d7cf99a95e60547c06f4 commit:90a740efae5329635db2d7cf99a95e60547c06f4 commit:90a740efae5329635db2d7cf99a95e60547c06f4
+## 2 链接
 
-
-`test commit:90a740efae5329635db2d7cf99a95e60547c06f4;commit:90a740efae5329635db2d7cf99a95e60547c06f4;`
-
-test commit:90a740efae5329635db2d7cf99a95e60547c06f4;commit:90a740efae5329635db2d7cf99a95e60547c06f4;
-
-`test commit:90a740efae5329635db2d7cf99a95e60547c06f4:commit:90a740efae5329635db2d7cf99a95e60547c06f4:`
-
-test commit:90a740efae5329635db2d7cf99a95e60547c06f4:commit:90a740efae5329635db2d7cf99a95e60547c06f4:
-
-### 不匹配
-
-`test: commit:90a740efae5329635db2d7cf99a95e60547c06f4commit:90a740efae5329635db2d7cf99a95e60547c06f4`
-
-test: commit:90a740efae5329635db2d7cf99a95e60547c06f4commit:90a740efae5329635db2d7cf99a95e60547c06f4
-
-### URL
+```ruby
+puts "Hello Ruby"
+puts "Hello Ruby"
+puts "Hello Ruby"
+puts "Hello Ruby"
+puts "Hello Ruby"
+```
