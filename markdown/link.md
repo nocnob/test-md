@@ -82,13 +82,27 @@
 
 [link-README](../README.md)
 
+[link-dir](./link)
+
 ![image](./link/1.png)
+
+#### 文件不存在
+
+[non-exist file](./non-exist.md)
+
+![non-exist image](./non-exist.png)
 
 ### HTML
 
 <a href="../README.md">link-README</a>
 
 <img src="./link/1.png" alt=""/>
+
+#### 文件不存在
+
+<a href="../README.md">non-exist file</a>
+
+<img src="./link/non-exist.png" alt=""/> non-exist png
 
 ## link1
 
