@@ -86,6 +86,8 @@
 
 ![image](./link/1.png)
 
+[link html#hpre](./html.md#pre)
+
 #### 文件不存在
 
 [non-exist file](./non-exist.md)
@@ -95,6 +97,8 @@
 ### HTML
 
 <a href="../README.md">link-README</a>
+
+<a href="./html.md#pre">link html#pre</a>
 
 <img src="./link/1.png" alt=""/>
 
