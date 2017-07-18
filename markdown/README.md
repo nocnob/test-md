@@ -60,7 +60,7 @@
 
 ### HTML
 
-<a href="#link1">link1</a>
+<a href="#link1">#link1</a>
 
 <a href="#1-链接">#1-链接</a>
 
@@ -78,35 +78,35 @@
 
 ### Markdown
 
-[link-README](./link/README.md)
+[./link/README.md](./link/README.md)
 
-[link-README](../README.md)
+[../README.md](../README.md)
 
-[link-dir](./link)
+[./link](./link)
 
-![image](./link/1.png)
+![./link/1.png](./link/1.png)
 
-[link html#hpre](./html.md#pre)
+[./html.md#pre](./html.md#pre)
 
 #### 文件不存在
 
-[non-exist file](./non-exist.md)
+[./non-exist.md](./non-exist.md)
 
-![non-exist image](./non-exist.png)
+![./non-exist.png](./non-exist.png)
 
 ### HTML
 
-<a href="../README.md">link-README</a>
+<a href="../README.md">../README.md</a>
 
-<a href="./html.md#pre">link html#pre</a>
+<a href="./html.md#pre">./html.md#pre</a>
 
-<img src="./link/1.png" alt=""/>
+<img src="./link/1.png" alt="./link/1.png"/>
 
 #### 文件不存在
 
-<a href="../README.md">non-exist file</a>
+<a href="./non-exist.md">./non-exist.md</a>
 
-<img src="./link/non-exist.png" alt=""/> non-exist png
+<img src="./link/non-exist.png" alt="./link/non-exist.png"/> non-exist png
 
 ## link1
 
