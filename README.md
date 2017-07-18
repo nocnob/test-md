@@ -17,3 +17,5 @@
 ## Video
 
 ![Sample Video](video/markdown_video.mp4)
+
+[wiki](../wikis)
