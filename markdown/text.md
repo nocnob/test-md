@@ -32,3 +32,9 @@ Map<String, Collection<Object.toString>>
 # emoji
 
 :no_mouth:  :smirk:  :tw-2b06:  :tw-2b07:  :fa-hand-o-right:  :fa-hand-o-left: 
+
+# task list
+
+- [ ] a
+- [ ] b
+- [ ] c
