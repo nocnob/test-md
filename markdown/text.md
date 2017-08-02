@@ -38,3 +38,7 @@ Map<String, Collection<Object.toString>>
 - [ ] a
 - [ ] b
 - [ ] c
+
+# image
+
+![./link/1.png](./link/1.png)
