@@ -6,7 +6,7 @@
 
 [OSC Gitlab 自适应](//www.oschina.net/p/gitlab)
 
-![image](//git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png)
+![image](//git.oschina.net/uploads/images/2017/0810/183500_34179a09_340906.jpeg)
 
 ### HTML
 
@@ -14,9 +14,9 @@
 
 <a href="//www.oschina.net/p/gitlab" class="cls">OSC Gitlab</a>
 
-<img alt="images" src="http://git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png"/>
+<img alt="images" src="https://git.oschina.net/uploads/images/2017/0810/183500_34179a09_340906.jpeg"/>
 
-<img alt="images" src="http://git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png" class="cls"/>
+<img alt="images" src="https://git.oschina.net/uploads/images/2017/0810/183500_34179a09_340906.jpeg" class="cls"/>
 
 ## 2. HTTP
 
@@ -24,7 +24,7 @@
 
 [link](http://git.oschina.net/osc/osc/blob/master/readme.md)
 
-![image](http://git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png)
+![image](http://git.oschina.net/uploads/images/2017/0810/183500_34179a09_340906.jpeg)
 
 ### HTML
 
@@ -32,9 +32,9 @@
 
 <a href="http://git.oschina.net/osc/osc/blob/master/readme.md" class="cls">GitOSC</a>
 
-<img src="http://git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png"/>
+<img src="https://git.oschina.net/uploads/images/2017/0810/183500_34179a09_340906.jpeg"/>
 
-<img alt="images" src="http://git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png"/>
+<img alt="images" src="https://git.oschina.net/uploads/images/2017/0810/183500_34179a09_340906.jpeg"/>
 
 ## 3. HTTPS
 
@@ -42,13 +42,13 @@
 
 [link](https://git.oschina.net/osc/osc/blob/master/readme.md)
 
-![image](https://git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png)
+![image](https://git.oschina.net/uploads/images/2017/0810/183500_34179a09_340906.jpeg)
 
 ### HTML
 
 <a href="https://git.oschina.net/osc/osc/blob/master/readme.md" class="cls">GitOSC</a>
 
-<img src="https://git.oschina.net/uploads/images/2017/0210/113913_cbaf56db_340906.png"/>
+<img src="https://git.oschina.net/uploads/images/2017/0810/183500_34179a09_340906.jpeg"/>
 
 ## 3. 页内跳转
 

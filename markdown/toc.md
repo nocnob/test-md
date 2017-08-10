@@ -1,7 +1,51 @@
 # Docker快速搭建开发环境—实战版
 
-[TOC]
+<!-- MarkdownTOC autolink="true" bracket="round" autoanchor="true" -->
 
+- [概要](#%E6%A6%82%E8%A6%81)
+	- [RoadMap](#roadmap)
+- [Docker基础](#docker%E5%9F%BA%E7%A1%80)
+	- [刀客有三宝：镜像、容器、仓库；](#%E5%88%80%E5%AE%A2%E6%9C%89%E4%B8%89%E5%AE%9D%EF%BC%9A%E9%95%9C%E5%83%8F%E3%80%81%E5%AE%B9%E5%99%A8%E3%80%81%E4%BB%93%E5%BA%93%EF%BC%9B)
+	- [Docker搭建和起步](#docker%E6%90%AD%E5%BB%BA%E5%92%8C%E8%B5%B7%E6%AD%A5)
+	- [Docker命令合集](#docker%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86)
+	- [run vs exec比对](#run-vs-exec%E6%AF%94%E5%AF%B9)
+	- [Docker registry搭建](#docker-registry%E6%90%AD%E5%BB%BA)
+	- [Docker使用好习惯](#docker%E4%BD%BF%E7%94%A8%E5%A5%BD%E4%B9%A0%E6%83%AF)
+	- [Docker registry搭建](#docker-registry%E6%90%AD%E5%BB%BA-1)
+- [番外篇0：Docker CE VS Docker EE](#%E7%95%AA%E5%A4%96%E7%AF%870%EF%BC%9Adocker-ce-vs-docker-ee)
+	- [选择 VS 选择恐惧症](#%E9%80%89%E6%8B%A9-vs-%E9%80%89%E6%8B%A9%E6%81%90%E6%83%A7%E7%97%87)
+	- [我是正文](#%E6%88%91%E6%98%AF%E6%AD%A3%E6%96%87)
+- [番外篇1：命令举例](#%E7%95%AA%E5%A4%96%E7%AF%871%EF%BC%9A%E5%91%BD%E4%BB%A4%E4%B8%BE%E4%BE%8B)
+	- [docker port](#docker-port)
+	- [docker run](#docker-run)
+	- [docker rm](#docker-rm)
+	- [docker run Vs docker exec](#docker-run-vs-docker-exec)
+	- [docker rm -f](#docker-rm--f)
+	- [docker logs](#docker-logs)
+	- [docker 命令综合应用](#docker-%E5%91%BD%E4%BB%A4%E7%BB%BC%E5%90%88%E5%BA%94%E7%94%A8)
+- [番外篇2：盗梦空间](#%E7%95%AA%E5%A4%96%E7%AF%872%EF%BC%9A%E7%9B%97%E6%A2%A6%E7%A9%BA%E9%97%B4)
+	- [参考bashrc](#%E5%8F%82%E8%80%83bashrc)
+	- [设置命令](#%E8%AE%BE%E7%BD%AE%E5%91%BD%E4%BB%A4)
+	- [赠与root](#%E8%B5%A0%E4%B8%8Eroot)
+	- [效果展示](#%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA)
+- [番外篇3：Docker exec 进入容器简化](#%E7%95%AA%E5%A4%96%E7%AF%873%EF%BC%9Adocker-exec-%E8%BF%9B%E5%85%A5%E5%AE%B9%E5%99%A8%E7%AE%80%E5%8C%96)
+	- [保存脚本为dgo](#%E4%BF%9D%E5%AD%98%E8%84%9A%E6%9C%AC%E4%B8%BAdgo)
+	- [设置Setup](#%E8%AE%BE%E7%BD%AEsetup)
+	- [演示Usage](#%E6%BC%94%E7%A4%BAusage)
+	- [脚本参数](#%E8%84%9A%E6%9C%AC%E5%8F%82%E6%95%B0)
+- [番外篇4：git小技巧之删除repo上的文件夹](#%E7%95%AA%E5%A4%96%E7%AF%874%EF%BC%9Agit%E5%B0%8F%E6%8A%80%E5%B7%A7%E4%B9%8B%E5%88%A0%E9%99%A4repo%E4%B8%8A%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9)
+	- [区分大小写](#%E5%8C%BA%E5%88%86%E5%A4%A7%E5%B0%8F%E5%86%99)
+	- [解决：删除repo上的文件夹](#%E8%A7%A3%E5%86%B3%EF%BC%9A%E5%88%A0%E9%99%A4repo%E4%B8%8A%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9)
+- [番外篇5：修改无法启动的docker容器的配置](#%E7%95%AA%E5%A4%96%E7%AF%875%EF%BC%9A%E4%BF%AE%E6%94%B9%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%E7%9A%84docker%E5%AE%B9%E5%99%A8%E7%9A%84%E9%85%8D%E7%BD%AE)
+	- [问题描述](#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0)
+	- [解决思路](#%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF)
+	- [解决步骤](#%E8%A7%A3%E5%86%B3%E6%AD%A5%E9%AA%A4)
+	- [总结](#%E6%80%BB%E7%BB%93)
+
+<!-- /MarkdownTOC -->
+
+
+<a name="%E6%A6%82%E8%A6%81"></a>
 # 概要
 
 本文由去年Reboot教育课程笔记为基础，加上自己的实践整理而来：如有疏漏之处，实属自己学艺不精，请各位大神不吝指教。
@@ -10,6 +54,7 @@
 
 至于为啥要学Docker，这年头，混江湖，没把趁手武器可还行？哪怕是所处的商业环境还在犹豫，你也可以提前三五年储备么。就能大幅节省时间这一条理由，就足够了。
 
+<a name="roadmap"></a>
 ## RoadMap
 
 ```shell
@@ -47,6 +92,7 @@
     
 ```
 
+<a name="docker%E5%9F%BA%E7%A1%80"></a>
 # Docker基础
 
 ​	天下武功，唯快不破。
@@ -55,6 +101,7 @@
 
 ​	我决定给Docker起个中文名：刀客 :)  
 
+<a name="%E5%88%80%E5%AE%A2%E6%9C%89%E4%B8%89%E5%AE%9D%EF%BC%9A%E9%95%9C%E5%83%8F%E3%80%81%E5%AE%B9%E5%99%A8%E3%80%81%E4%BB%93%E5%BA%93%EF%BC%9B"></a>
 ## 刀客有三宝：镜像、容器、仓库；
 
 ```shell
@@ -64,6 +111,7 @@
  	|____仓库（Repository）# 琅嬛：尘事如潮人如水， 只叹江湖几人回。
 ```
 
+<a name="docker%E6%90%AD%E5%BB%BA%E5%92%8C%E8%B5%B7%E6%AD%A5"></a>
 ## Docker搭建和起步
 
 + 学习
@@ -79,6 +127,7 @@
 
 
 
+<a name="docker%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86"></a>
 ## Docker命令合集
 
 | 编号   | 命令                             | 举例   | 作用                        |
@@ -96,6 +145,7 @@
 | 11   | docker tag                     |      | # 给镜像打标签                  |
 | 12   | docker push                    |      | # push镜像到（个人）仓库           |
 
+<a name="run-vs-exec%E6%AF%94%E5%AF%B9"></a>
 ## run vs exec比对
 
 run 命令可以启动一个容器（如果没有则启动，然后运行命令），  exec的目标必须是一个启动的容器
@@ -110,10 +160,12 @@ run 命令可以启动一个容器（如果没有则启动，然后运行命令�
 
 小规模使用可以用docker export、import 、input 、load来简单使用镜像的发布。大规模使用建议搭建自己的registry，相当于官方的docker hub，类似于github 私有仓库。
 
+<a name="docker-registry%E6%90%AD%E5%BB%BA"></a>
 ## Docker registry搭建
 
 待补
 
+<a name="docker%E4%BD%BF%E7%94%A8%E5%A5%BD%E4%B9%A0%E6%83%AF"></a>
 ## Docker使用好习惯
 
 ### 使用DockerFile而不是DockerCommit
@@ -141,24 +193,30 @@ run 命令可以启动一个容器（如果没有则启动，然后运行命令�
 
 参见 [番外篇3：Docker exec 进入容器简化](#番外篇3：Docker-exec-进入容器简化)
 
+<a name="docker-registry%E6%90%AD%E5%BB%BA-1"></a>
 ## Docker registry搭建
 
 待补
 
+<a name="%E7%95%AA%E5%A4%96%E7%AF%870%EF%BC%9Adocker-ce-vs-docker-ee"></a>
 # 番外篇0：Docker CE VS Docker EE
 
+<a name="%E9%80%89%E6%8B%A9-vs-%E9%80%89%E6%8B%A9%E6%81%90%E6%83%A7%E7%97%87"></a>
 ## 选择 VS 选择恐惧症
 
 ​	对于有选择恐惧症的人来说，纠结了。这个问题好比选择学习哪种语言，选哪种框架一样：“对于大神来说，你纠结的功夫，人家学完了，还顺手敲了一个小实战项目仍github了。”人生的区别就在于此，调整好状态，开干吧。扯完了，看正文：
 
+<a name="%E6%88%91%E6%98%AF%E6%AD%A3%E6%96%87"></a>
 ## 我是正文
 
 截至此篇文章发表，Docker已经和去年的生态环境不大一样了。正式推出Docker EE，宣布进军企业级市场。
 
 对于初学者，选择Docker CE（社区民间版），足以。企业级应用强调了安全，安全，安全，就这一项，不差钱的壕已经选择了跟进。当然，EE版所提供的服务，通过开源解决方案也能实现，而且比刚出炉的EE还要Strong一些，国内的环境：没有困难制造困难也要上的，要什么自行车。Docker CE足以。
 
+<a name="%E7%95%AA%E5%A4%96%E7%AF%871%EF%BC%9A%E5%91%BD%E4%BB%A4%E4%B8%BE%E4%BE%8B"></a>
 # 番外篇1：命令举例
 
+<a name="docker-port"></a>
 ## docker port
 
 ```shelll
@@ -166,6 +224,7 @@ $ docker port webserver
 80/tcp -> 0.0.0.0:80
 ```
 
+<a name="docker-run"></a>
 ## docker run
 
 ```shell
@@ -174,6 +233,7 @@ dokcer run centos tail -f /etc/hosts
 docker run centos ping -c 3 g.cn
 ```
 
+<a name="docker-rm"></a>
 ## docker rm
 
 ```shell
@@ -181,6 +241,7 @@ $ docker rm 69719220cdb6
 69719220cdb6
 ```
 
+<a name="docker-run-vs-docker-exec"></a>
 ## docker run Vs docker exec
 
 ```shell
@@ -197,18 +258,21 @@ $ docker run --name="centos_kch" -itd centos tail -f /etc/hosts
 $ docker exec -it centos_kch /bin/bash #进入交互式bash
 ```
 
+<a name="docker-rm--f"></a>
 ## docker rm -f
 
 ```shell
 $ docker rm -f centos_kch # 停止并删除容器:干净整洁不留垃圾.毫秒级；
 ```
 
+<a name="docker-logs"></a>
 ## docker logs
 
 ```shell
 $ docker logs <容器名orID> 2>&1 | grep '^User: ' | tail -n1 #得到容器的root密码,因为启动时密码随机
 ```
 
+<a name="docker-%E5%91%BD%E4%BB%A4%E7%BB%BC%E5%90%88%E5%BA%94%E7%94%A8"></a>
 ## docker 命令综合应用
 
 export/import sava/load/tag/rm/rmi ，展示小规模应用时的导入导出镜像。
@@ -302,12 +366,14 @@ busybox             latest              e02e811dd08f        6 weeks ago         
 
 
 
+<a name="%E7%95%AA%E5%A4%96%E7%AF%872%EF%BC%9A%E7%9B%97%E6%A2%A6%E7%A9%BA%E9%97%B4"></a>
 # 番外篇2：盗梦空间
 
 使用docker时，应时刻注意自己在哪儿，防止误操作。docker容器一般都是root权限，这个时候往往是宿主机、各容器相互交错，甚至有时候还有自己的笔记本远程登录维护的场景；一个不慎，就是生产事故。
 
 ​**解决办法：设置PS1变量**，每个用户下颜色不一样，提示符不一样。同时加强用户权限的管理和落地，赋予运维人员岗位角色最小的权限，严格控制特殊权限如root的申请流程和双人复核制度；
 
+<a name="%E5%8F%82%E8%80%83bashrc"></a>
 ## 参考bashrc
 
 
@@ -373,6 +439,7 @@ fi
 unset use_color safe_term match_lhs
 ```
 
+<a name="%E8%AE%BE%E7%BD%AE%E5%91%BD%E4%BB%A4"></a>
 ## 设置命令
 
 ```bash
@@ -380,6 +447,7 @@ cp bashrc ~/.bashrc
 . ~/.bashrc
 ```
 
+<a name="%E8%B5%A0%E4%B8%8Eroot"></a>
 ## 赠与root
 
 ```bash
@@ -387,10 +455,12 @@ sudo cp ~/.bashrc /root/
 sudo su -
 ```
 
+<a name="%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA"></a>
 ## 效果展示
 
 ![盗梦空间_ps1](screenshoots/盗梦空间_ps1.png)
 
+<a name="%E7%95%AA%E5%A4%96%E7%AF%873%EF%BC%9Adocker-exec-%E8%BF%9B%E5%85%A5%E5%AE%B9%E5%99%A8%E7%AE%80%E5%8C%96"></a>
 # 番外篇3：Docker exec 进入容器简化
 
 我们经常要写这条命令，进入容器交互bash：
@@ -417,6 +487,7 @@ docker exec -i -t $DID bash
 
 修订一下：如果不带参数，默认进入第一个运行的容器，但是过滤出来的是所有运行的容器。此处修订：
 
+<a name="%E4%BF%9D%E5%AD%98%E8%84%9A%E6%9C%AC%E4%B8%BAdgo"></a>
 ## 保存脚本为dgo
 
 ```bash
@@ -433,6 +504,7 @@ fi
 docker exec -i -t $DID bash
 ```
 
+<a name="%E8%AE%BE%E7%BD%AEsetup"></a>
 ## 设置Setup
 
 > Put docker-ssh file in your $PATH with the following contents
@@ -443,6 +515,7 @@ docker exec -i -t $DID bash
 sudo cp dgo /usr/local/bin/
 ```
 
+<a name="%E6%BC%94%E7%A4%BAusage"></a>
 ## 演示Usage
 
 > If you have one running instance simply run
@@ -464,6 +537,7 @@ AnInputForce.teach ~ $ dgo centos_kch
 [root@3ccdb6bcf75a /]# 
 ```
 
+<a name="%E8%84%9A%E6%9C%AC%E5%8F%82%E6%95%B0"></a>
 ## 脚本参数
 
 - bash -xe
@@ -471,10 +545,12 @@ AnInputForce.teach ~ $ dgo centos_kch
   - 把它执行的每条命令都打到console上，有助于让大家了解都执行的什么，有助于提醒这个脚本是个自定义命令；这是一个非常好的习惯；
 - -e 执行完退出；
 
+<a name="%E7%95%AA%E5%A4%96%E7%AF%874%EF%BC%9Agit%E5%B0%8F%E6%8A%80%E5%B7%A7%E4%B9%8B%E5%88%A0%E9%99%A4repo%E4%B8%8A%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9"></a>
 # 番外篇4：git小技巧之删除repo上的文件夹
 
 场景：图片我放到了“Screenshoot”目录，链接写成了“screenshoot”，图片显示不出来。我把本地文件夹手工改成“screenshoot”，add和commit、push之后，发现git不变。配置大小写敏感：
 
+<a name="%E5%8C%BA%E5%88%86%E5%A4%A7%E5%B0%8F%E5%86%99"></a>
 ## 区分大小写
 
 ```shell
@@ -492,6 +568,7 @@ ChinaDreams:O1.8-Docker快速搭建开发环境—实战 kangcunhua$ git mv -f s
 fatal: renaming 'O1-博客/O1.8-Docker快速搭建开发环境—实战/screenshoots' failed: Invalid argument
 ```
 
+<a name="%E8%A7%A3%E5%86%B3%EF%BC%9A%E5%88%A0%E9%99%A4repo%E4%B8%8A%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9"></a>
 ## 解决：删除repo上的文件夹
 
 此时，如用git rm -r，则本地文件也被删了。应删缓存。参考：[这里](https://stackoverflow.com/questions/7927230/remove-directory-from-remote-repository-after-adding-them-to-gitignore)。
@@ -517,14 +594,17 @@ git mv myfolder tmp
 git mv tmp MyFolder
 ```
 
+<a name="%E7%95%AA%E5%A4%96%E7%AF%875%EF%BC%9A%E4%BF%AE%E6%94%B9%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%E7%9A%84docker%E5%AE%B9%E5%99%A8%E7%9A%84%E9%85%8D%E7%BD%AE"></a>
 # 番外篇5：修改无法启动的docker容器的配置
 
 发表于 2016年 10月 11日 济南 作者 [阳光如初](http://www.veryjava.cn/) ；原文地址：[点击这里](http://blog.veryjava.cn/2016/10/11/01/)；**转帖原因**：文章写得太好了，先提前备份下来，有机会测试验证下。
 
+<a name="%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"></a>
 ## 问题描述
 
 mysql在运行过程中报错,进入mysql容器修改配置文件时,单词拼错,导致mysql容器无法重新启动.
 
+<a name="%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF"></a>
 ## 解决思路
 
 由于docker无法进入已经停止的容器,所以只能曲线救国.
@@ -534,6 +614,7 @@ mysql在运行过程中报错,进入mysql容器修改配置文件时,单词拼�
 - 将无法启动的docker容器中的内容复制出来
 - 使用新的镜像启动容器并挂载文件内容
 
+<a name="%E8%A7%A3%E5%86%B3%E6%AD%A5%E9%AA%A4"></a>
 ## 解决步骤
 
 - 提交已经死亡的mysql容器
@@ -569,6 +650,7 @@ mysql在运行过程中报错,进入mysql容器修改配置文件时,单词拼�
 
   **这个地方需要注意:** 因为在第二个步骤启动临时终端时使用了`/bin/bash`命令覆盖了mysql镜像中的`mysqld`命令,如果这一步不使用`mysqld` 命令覆盖回来的话,则不会启动成功.
 
+<a name="%E6%80%BB%E7%BB%93"></a>
 ## 总结
 
 - 话说在使用docker的过程中,直接进入容器修改配置文件,出错了好像真没有什么办法能够回复.只能在使用过程中注意了…
