@@ -6,7 +6,7 @@
 
 [OSC Gitlab 自适应](//www.oschina.net/p/gitlab)
 
-![image](//git.oschina.net/uploads/images/2017/0810/183500_34179a09_340906.jpeg)
+<img src="//git.oschina.net/uploads/images/2017/0810/183500_34179a09_340906.jpeg" alt="Smiley face" height="42" width="42">
 
 ### HTML
 
