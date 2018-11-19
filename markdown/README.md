@@ -2,6 +2,7 @@
 
 [/README.md](/README.md)
 
+`[/README.md](/README.md)`
 ## 1. 自适应链接
 
 ### Markdown
