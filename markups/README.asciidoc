@@ -23,3 +23,220 @@ puts "Hello, World!"
 == Another Section
 
 content
+
+== 段落
+
+=== 正常
+Paragraphs don't require any special markup in AsciiDoc.
+A paragraph is just one or more lines of consecutive text.
+
+To begin a new paragraph, separate it by at least one blank line.
+
+=== 换行
+
+Rubies are red, +
+Topazes are blue.
+
+[%hardbreaks]
+Ruby is red.
+Java is black.
+
+=== 文字
+
+A normal paragraph.
+
+ A sequence of lines that begin with at least one space is a literal paragraph.
+ Literal paragraphs are treated as preformatted text.
+ The text is shown in a fixed-width font
+ and endlines are preserved.
+
+Another normal paragraph.
+
+
+=== 警告
+
+NOTE: An admonition paragraph draws the reader's attention to
+auxiliary information.
+Its purpose is determined by the label
+at the beginning of the paragraph.
+
+Here are the other built-in admonition types:
+
+TIP: Pro tip...
+
+IMPORTANT: Don't forget...
+
+WARNING: Watch out for...
+
+CAUTION: Ensure that...
+
+=== 概要段落
+
+[.lead]
+This text will be styled as a lead paragraph (i.e., larger font).
+
+== 格式化文本
+
+=== 加粗、斜体和等宽字体
+
+_italic phrase_
+
+__i__talic le__tt__ers
+
+*bold phrase*
+
+**b**old le**tt**ers
+
+*_bold italic phrase_*
+
+**__b__**old italic le**__tt__**ers
+
+`monospace phrase` and le``tt``ers
+
+`_monospace italic phrase_` and le``__tt__``ers
+
+`*monospace bold phrase*` and le``**tt**``ers
+
+`*_monospace bold italic phrase_*` and le``**__tt__**``ers
+
+=== 自定义样式
+
+Werewolves are #allergic to cinnamon#.
+
+Do werewolves believe in [small]#small print#?
+
+[big]##O##nce upon an infinite loop.
+
+=== 上角标 和 脚注
+
+^super^script phrase
+
+~sub~script phrase
+
+=== 引号
+
+'`single curved quotes`'
+
+"`double curved quotes`"
+
+Olaf's desk was a mess.
+
+All of the werewolves`' desks were a mess.
+
+Olaf had been with the company since the `'60s.
+
+== 列表
+
+=== 基本无序列表
+
+* Edgar Allen Poe
+* Sheri S. Tepper
+* Bill Bryson
+
+=== 无序嵌套列表
+
+* level 1
+** level 2
+*** level 3
+**** level 4
+***** level 5
+* level 1
+
+=== 清单
+
+- [*] checked
+- [x] also checked
+- [ ] not checked
+-     normal list item
+
+=== 基本有序列表
+
+. Step 1
+. Step 2
+. Step 3
+
+=== 有序嵌套列表
+
+. Step 1
+. Step 2
+.. Step 2a
+.. Step 2b
+. Step 3
+
+=== 有序最大嵌套列表
+
+. level 1
+.. level 2
+... level 3
+.... level 4
+..... level 5
+. level 1
+
+=== 单行标签列表
+
+first term:: definition of first term
+section term:: definition of second term
+
+=== 多行标签列表
+
+first term::
+definition of first term
+section term::
+definition of second term
+
+=== 常见问题以及解答
+
+[qanda]
+What is Asciidoctor?::
+  An implementation of the AsciiDoc processor in Ruby.
+What is the answer to the Ultimate Question?:: 42
+
+=== 混合样式列表
+
+Operating Systems::
+  Linux:::
+    . Fedora
+      * Desktop
+    . Ubuntu
+      * Desktop
+      * Server
+  BSD:::
+    . FreeBSD
+    . NetBSD
+
+Cloud Providers::
+  PaaS:::
+    . OpenShift
+    . CloudBees
+  IaaS:::
+    . Amazon EC2
+    . Rackspace
+
+
+=== 复杂内容列表
+
+* Every list item has at least one paragraph of content,
+  which may be wrapped, even using a hanging indent.
++
+Additional paragraphs or blocks are adjoined by putting
+a list continuation on a line adjacent to both blocks.
++
+list continuation:: a plus sign (`{plus}`) on a line by itself
+
+* A literal paragraph does not require a list continuation.
+
+ $ gem install asciidoctor
+
+* AsciiDoc lists may contain any complex content.
++
+[cols="2", options="header"]
+|===
+|Application
+|Language
+
+|AsciiDoc
+|Python
+
+|Asciidoctor
+|Ruby
+|===
