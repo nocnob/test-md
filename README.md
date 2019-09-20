@@ -1,6 +1,6 @@
 # README
 
-FAK(#FAQ)
+* [FAK](#FAQ)
 
 <!-- 注释 -->
 
