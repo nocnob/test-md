@@ -16,3 +16,6 @@
 [submodule "submod/ssh_gh"]
 	path = submod/ssh_gh
 	url = gh:ceshiyixiaba/test-md.git
+[submodule "submod/ssh_git_at_gh"]
+	path = submod/ssh_git_at_gh
+	url = git@gh:ceshiyixiaba/test-md.git
