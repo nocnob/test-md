@@ -1,0 +1,18 @@
+[submodule "submod/ssh_github"]
+	path = submod/ssh_github
+	url = git@github.com:ceshiyixiaba/test-md.git
+[submodule "submod/https_github"]
+	path = submod/https_github
+	url = https://github.com/ceshiyixiaba/test-md.git
+[submodule "submod/git_github"]
+	path = submod/git_github
+	url = git://github.com/ceshiyixiaba/test-md.git
+[submodule "submod/https_gitee"]
+	path = submod/https_gitee
+	url = https://gitee.com/lowkey2046/test-md.git
+[submodule "submod/ssh_gitee"]
+	path = submod/ssh_gitee
+	url = git@gitee.com:lowkey2046/test-md.git
+[submodule "submod/ssh_gh"]
+	path = submod/ssh_gh
+	url = gh:ceshiyixiaba/test-md.git
