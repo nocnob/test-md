@@ -5,6 +5,7 @@
 ```ruby
 puts "Hello World!"
 puts "GPG!"
+puts "Short GPG!"
 ```
 
 测试关联
