@@ -4,6 +4,7 @@
 
 ```ruby
 puts "Hello World!"
+puts "GPG!"
 ```
 
 测试关联
