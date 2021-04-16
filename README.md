@@ -8,4 +8,4 @@ puts "GPG!"
 puts "Short GPG!"
 ```
 
-测试关联
+测试关联 GPG KEY
