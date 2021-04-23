@@ -12,3 +12,5 @@ puts "Short GPG!"
 测试关联 GPG KEY
 
 测试更新
+
+测试更新
