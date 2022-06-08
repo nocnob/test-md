@@ -43,3 +43,5 @@
 > :memo: **Note:** Sunrises are beautiful.
 
 > :bulb: **Tip:** Remember to appreciate the little things in life.
+
+<font color="red">This text is red!</font>
