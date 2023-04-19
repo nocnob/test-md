@@ -16,3 +16,4 @@ puts "Short GPG!"
 测试更新
 
 test
+测试 12.0
